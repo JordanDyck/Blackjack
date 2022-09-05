@@ -1,0 +1,198 @@
+* {
+    margin: 0;
+}
+
+body {
+    width: 100vw;
+    margin: 0 auto;
+    background-color: #008b00d4;
+    overflow: hidden;
+}
+
+.btns {
+    text-align: center;
+    justify-content: center;
+    margin-top: 30px;
+    
+    #hit, #stay {
+        cursor: pointer;
+        padding: 7px 40px 7px 38px;
+        
+        font-size: 25px;
+    }
+    #restartBtn {
+        font-size: 42px;
+        left: 52rem;
+        display: none;
+        font-family: monospace;
+    }
+}
+
+#hit:hover, #stay:hover {
+    box-shadow: 4px 5px 5px black;
+    transition: box-shadow 0.5s;
+}
+
+@keyframes pCard-animation {
+    from {margin-top: 40rem;}
+    to {margin-top: 0rem;}
+}
+@keyframes pCard-animation-reversed {
+    from {margin-top: 0rem;}
+    to {margin-top: 40rem;}
+}
+
+.pCard-animation {
+    animation: pCard-animation 0.5s 1 forwards;
+}
+
+.pCard-animation-reversed {
+    animation: pCard-animation-reversed 0.5s 1 forwards;
+}
+
+.pCards {
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    padding: 8px;
+    margin-top: 2rem;
+    height: 12rem;
+    background-color: green;
+    visibility: hidden;
+
+    img {
+        height: 12rem;
+        
+    }
+}
+
+@keyframes backCards {
+    from {margin-top: 0rem;}
+    to {
+        margin-top: -18rem;
+        display: none;
+    }
+}
+
+.animated {
+    animation: backCards 0.5s 1 forwards;
+}
+
+.animated-reverse {
+    animation: cCard-animation 0.5s 1 forwards;
+}
+
+@keyframes cCard-animation {
+    from {margin-top: -18rem;}
+    to {margin-top: 0rem;}
+}
+
+@keyframes cCard-animation-reversed {
+    from {margin-top: 0rem;}
+    to {margin-top: -18rem;}
+}
+
+.cCard-animation {
+    animation: cCard-animation 0.5s 1 forwards;
+}
+.cCard-animation-reversed {
+    animation: cCard-animation-reversed 0.5s 1 forwards;
+    
+}
+.comCards {
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    margin-top: 3rem;
+    padding: 8px;
+    height: 12rem;
+    background-color: green;
+    visibility: hidden;
+    
+
+    .cCardInHand {
+        height: 12rem;
+        
+    }
+    
+    .cardBack {
+        border-radius: 9px;
+        padding: 2px;
+        height: 12rem;
+    }
+}
+
+
+   
+
+.pTotal-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    #pTotal {
+        font-size: 25px;
+        font-family: sans-serif;
+        border-bottom: 2px solid;
+    }
+}
+.cTotal-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+
+    #cTotal {
+        font-size: 25px;
+        visibility: hidden;
+        font-family: sans-serif;
+        border-bottom: 2px solid;
+    }
+}
+
+.bust-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    
+    #bust-text {
+        border-bottom: 2px solid;
+        font-size: 25px;
+        margin: 0;
+        visibility: hidden;
+    }
+}
+// fix this shit
+@media (max-width: 800px) {
+    .cTotal-container {
+        margin-top: 13px;
+        margin-bottom: 3px;
+    }
+    .bust-container {
+        margin-bottom: -26px;
+    }
+    .pCards {
+        height: 7rem;
+        img {
+            
+            height: 7rem
+        }
+    }
+    .comCards {
+        height: 7rem;
+        .cCardInHand, .cardBack {
+            height: 7rem;
+        }
+    }
+    .btns {
+        margin-top: -13px;
+        #restartBtn {
+            font-size: 32px;
+            margin-top: 30px;
+        }
+        #hit, #stay {
+            font-size: 20px;
+            margin-top: 30px;
+            
+        }
+    }
+
+}

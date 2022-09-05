@@ -1,0 +1,291 @@
+* {
+  margin: 0;
+}
+
+body {
+  width: 100vw;
+  margin: 0 auto;
+  background-color: #008b00d4;
+  overflow: hidden;
+}
+
+.btns {
+  text-align: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-top: 30px;
+}
+
+.btns #hit, .btns #stay {
+  cursor: pointer;
+  padding: 7px 40px 7px 38px;
+  font-size: 25px;
+}
+
+.btns #restartBtn {
+  font-size: 42px;
+  left: 52rem;
+  display: none;
+  font-family: monospace;
+}
+
+#hit:hover, #stay:hover {
+  -webkit-box-shadow: 4px 5px 5px black;
+          box-shadow: 4px 5px 5px black;
+  -webkit-transition: -webkit-box-shadow 0.5s;
+  transition: -webkit-box-shadow 0.5s;
+  transition: box-shadow 0.5s;
+  transition: box-shadow 0.5s, -webkit-box-shadow 0.5s;
+}
+
+@-webkit-keyframes pCard-animation {
+  from {
+    margin-top: 40rem;
+  }
+  to {
+    margin-top: 0rem;
+  }
+}
+
+@keyframes pCard-animation {
+  from {
+    margin-top: 40rem;
+  }
+  to {
+    margin-top: 0rem;
+  }
+}
+
+@-webkit-keyframes pCard-animation-reversed {
+  from {
+    margin-top: 0rem;
+  }
+  to {
+    margin-top: 40rem;
+  }
+}
+
+@keyframes pCard-animation-reversed {
+  from {
+    margin-top: 0rem;
+  }
+  to {
+    margin-top: 40rem;
+  }
+}
+
+.pCard-animation {
+  -webkit-animation: pCard-animation 0.5s 1 forwards;
+          animation: pCard-animation 0.5s 1 forwards;
+}
+
+.pCard-animation-reversed {
+  -webkit-animation: pCard-animation-reversed 0.5s 1 forwards;
+          animation: pCard-animation-reversed 0.5s 1 forwards;
+}
+
+.pCards {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 8px;
+  margin-top: 2rem;
+  height: 12rem;
+  background-color: green;
+  visibility: hidden;
+}
+
+.pCards img {
+  height: 12rem;
+}
+
+@-webkit-keyframes backCards {
+  from {
+    margin-top: 0rem;
+  }
+  to {
+    margin-top: -18rem;
+    display: none;
+  }
+}
+
+@keyframes backCards {
+  from {
+    margin-top: 0rem;
+  }
+  to {
+    margin-top: -18rem;
+    display: none;
+  }
+}
+
+.animated {
+  -webkit-animation: backCards 0.5s 1 forwards;
+          animation: backCards 0.5s 1 forwards;
+}
+
+.animated-reverse {
+  -webkit-animation: cCard-animation 0.5s 1 forwards;
+          animation: cCard-animation 0.5s 1 forwards;
+}
+
+@-webkit-keyframes cCard-animation {
+  from {
+    margin-top: -18rem;
+  }
+  to {
+    margin-top: 0rem;
+  }
+}
+
+@keyframes cCard-animation {
+  from {
+    margin-top: -18rem;
+  }
+  to {
+    margin-top: 0rem;
+  }
+}
+
+@-webkit-keyframes cCard-animation-reversed {
+  from {
+    margin-top: 0rem;
+  }
+  to {
+    margin-top: -18rem;
+  }
+}
+
+@keyframes cCard-animation-reversed {
+  from {
+    margin-top: 0rem;
+  }
+  to {
+    margin-top: -18rem;
+  }
+}
+
+.cCard-animation {
+  -webkit-animation: cCard-animation 0.5s 1 forwards;
+          animation: cCard-animation 0.5s 1 forwards;
+}
+
+.cCard-animation-reversed {
+  -webkit-animation: cCard-animation-reversed 0.5s 1 forwards;
+          animation: cCard-animation-reversed 0.5s 1 forwards;
+}
+
+.comCards {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-top: 3rem;
+  padding: 8px;
+  height: 12rem;
+  background-color: green;
+  visibility: hidden;
+}
+
+.comCards .cCardInHand {
+  height: 12rem;
+}
+
+.comCards .cardBack {
+  border-radius: 9px;
+  padding: 2px;
+  height: 12rem;
+}
+
+.pTotal-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-top: 20px;
+}
+
+.pTotal-container #pTotal {
+  font-size: 25px;
+  font-family: sans-serif;
+  border-bottom: 2px solid;
+}
+
+.cTotal-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-top: 20px;
+}
+
+.cTotal-container #cTotal {
+  font-size: 25px;
+  visibility: hidden;
+  font-family: sans-serif;
+  border-bottom: 2px solid;
+}
+
+.bust-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-top: 20px;
+}
+
+.bust-container #bust-text {
+  border-bottom: 2px solid;
+  font-size: 25px;
+  margin: 0;
+  visibility: hidden;
+}
+
+@media (max-width: 800px) {
+  .cTotal-container {
+    margin-top: 13px;
+    margin-bottom: 3px;
+  }
+  .bust-container {
+    margin-bottom: -26px;
+  }
+  .pCards {
+    height: 7rem;
+  }
+  .pCards img {
+    height: 7rem;
+  }
+  .comCards {
+    height: 7rem;
+  }
+  .comCards .cCardInHand, .comCards .cardBack {
+    height: 7rem;
+  }
+  .btns {
+    margin-top: -13px;
+  }
+  .btns #restartBtn {
+    font-size: 32px;
+    margin-top: 30px;
+  }
+  .btns #hit, .btns #stay {
+    font-size: 20px;
+    margin-top: 30px;
+  }
+}
