@@ -60,7 +60,7 @@ let isWinner = false
 
 const displayBackCard = () => {
     let cardBack = document.createElement('img')
-    cardBack.src = "/img/facedowncard.png"
+    cardBack.src = "img/facedowncard.png"
     cardBack.setAttribute('class', 'cardBack')
     displayComCards[0].appendChild(cardBack)
     cardBack.classList.add('animated-reverse')
