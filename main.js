@@ -1,4 +1,3 @@
-const deckID = "b1z7hhc64dnj"
 let pTotal = document.getElementById("pTotal")
 let cTotal = document.getElementById("cTotal")
 const hit = document.getElementById("hit")
@@ -10,13 +9,6 @@ const cCardInHand = document.getElementsByClassName("cCardInHand")
 
 let bust = document.getElementById("bust-text")
 
-// fetch the deck
-function getDeck() {
-  fetch(`https://deckofcardsapi.com/api/deck/${deckID}/shuffle/?deck_count=1`)
-    .then((res) => res.json())
-    .then((data) => console.log(data))
-}
-
 hit.style.display = "none"
 stay.style.display = "none"
 pTotal.style.visibility = "hidden"
@@ -26,7 +18,7 @@ let comCount = 0
 
 // fetch the cards
 function playerHand() {
-  fetch(`https://deckofcardsapi.com/api/deck/${deckID}/draw/?count=${pCount}`)
+  fetch(`https://deckofcardsapi.com/api/deck/new/draw/?count=${pCount}`)
     .then((res) => res.json())
     .then((data) => {
       comTurn = false
@@ -37,7 +29,7 @@ function playerHand() {
 }
 
 function computerHand() {
-  fetch(`https://deckofcardsapi.com/api/deck/${deckID}/draw/?count=${comCount}`)
+  fetch(`https://deckofcardsapi.com/api/deck/new/draw/?count=${comCount}`)
     .then((res) => res.json())
     .then((data) => {
       comTurn = true
@@ -69,7 +61,6 @@ const displayBackCard = () => {
 const gameStart = () => {
   isBust = false
   isWinner = false
-  getDeck()
   playerHand()
   computerHand()
   setTimeout(() => {
